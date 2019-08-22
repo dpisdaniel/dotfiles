@@ -1,0 +1,28 @@
+[user]                        
+name = <INSERT_NAME>
+email = <INSERT_MAIL>
+
+[push]               
+default = simple             
+
+[pull]               
+rebase = true
+
+[sendemail]                     
+smtpEncryption = tls
+smtpServer = smtp.gmail.com
+smtpUser = <INSERT_MAIL>
+smtpServerPort = 587
+annotate = yes            
+
+[diff]                       
+tool = nvimdiff                  
+
+[difftool "nvimdiff"]
+cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+
+[merge]                                 
+tool = nvim                                            
+[mergetool "nvim"]                                                  
+cmd = nvim -f -c \"colorscheme default\" -c \"Gvdiff\" \"$MERGED\"
+

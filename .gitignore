@@ -1,0 +1,11 @@
+# Ignore all tmux plugins
+tmux/.tmux/plugins/*
+
+# Make sure we ignore installed plugins and plug.vim so the install script downloads it properly
+plugged/
+neovim/.local/
+
+# Ignore the installed oh-my-zsh
+.oh-my-zsh/
+
+.netrwhist
