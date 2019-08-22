@@ -1,6 +1,8 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'tmux-plugins/vim-tmux'
+Plug 'christoomey/vim-tmux-navigator'
+
 call plug#end()
 
 " Enable hybrid line numbers
