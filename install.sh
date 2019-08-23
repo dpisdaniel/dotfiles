@@ -65,3 +65,6 @@ stow zsh
 echo "Changing the active shell to zsh"
 chsh -s $(command -v zsh)
 
+echo "To finish the installation, log out and log in so the the new shell registers. Also, run :PlugInstall inside vim"
+echo "Finished installing."
+
