@@ -1,5 +1,6 @@
-# Ignore all tmux plugins
+# Ignore all tmux plugins except tpm
 tmux/.tmux/plugins/*
+!tmux/.tmux/plugins/tpm/
 
 # Make sure we ignore installed plugins and plug.vim so the install script downloads it properly
 plugged/
