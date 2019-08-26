@@ -1,10 +1,17 @@
 call plug#begin('~/.config/nvim/plugged')
 
+" Better syntax highlighting and built in command integration in tmux rc files
 Plug 'tmux-plugins/vim-tmux'
+
+" Easy navigation between tmux panes and vim splits
 Plug 'christoomey/vim-tmux-navigator'
+
+" Apprentice colorscheme
+Plug 'romainl/Apprentice'
 
 call plug#end()
 
+colorscheme apprentice
 " Enable hybrid line numbers
 set relativenumber number
 
@@ -51,9 +58,21 @@ filetype indent on
 
 let mapleader="\<Space>"
 
+" Leader mappings
+" Maps leader-s to a global search without going to the results, also showing
+" us results outside the current screen
+nnoremap <Leader>s :g//<Left>
+" Removes the highlihgting from all the searches
+nnoremap <Leader><Space> :nohlsearch<CR>
+
 " Map the pesky Escape key to a better alternative
 inoremap jj <Esc>
 inoremap kk <Esc>
 
 " Create a vertical split using vv
 nnoremap vv <C-w>v
+
+" Make it so j and k with over 1 in their count get added to the jumplist
+nnoremap <expr> k (v:count > 1 ? "m'" . v:count : '') . 'gk'
+nnoremap <expr> j (v:count > 1 ? "m'" . v:count : '') . 'gj'
+
